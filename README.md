@@ -8,16 +8,13 @@ sudo ./setup.sh
 ```
 Will do the following:
 * Update the system
-* Install
-* ...
-* Configure
+* Install some useful programs
+* Configure git, Atom..
 * Cleanup after the installation
 
 ## Todo
+* Install more tools
+* Extract, move to /opt and make jetbrains tools executables
 
-gparted pycharm intellij_idea webstorm clion codeblocks arduino_ide
-gimp inkscape telegram viber nmap wireshark Koala postgres mysql mongodb bleachbit handbrake kazam openshot scribus
-buil-essencials wps
-
-* Chrome apps
-hangout vysor
+Graphic installation for:
+* Xampp

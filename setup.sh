@@ -16,6 +16,8 @@ sudo dpkg --add-architecture i386
 sudo add-apt-repository -y ppa:webupd8team/java
 sudo add-apt-repository -y ppa:wine/wine-builds
 sudo add-apt-repository -y ppa:damien-moore/codeblocks-stable
+sudo apt-add-repository -y ppa:sylvain-pineau/kazam
+sudo apt-add-repository -y universe
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927
 echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.2 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.2.
 
@@ -50,13 +52,17 @@ sudo apt-get install -y default-jdk
 echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
 sudo apt-get install -y oracle-java8-installer
 
-sudo apt install -y build-essential
+sudo apt install -y build-essential curl
 
 # Install python versions and pip
 sudo apt install -y python3
 sudo apt install -y python-pip
 sudo apt install -y python3-pip
 pip install -U pip setuptools
+
+# Install node
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install -y nodejs
 
 # Paralel node & python packages installation
 sudo python setup_packags.py
@@ -94,7 +100,15 @@ sudo apt install -y codeblocks codeblocks-contrib
 wget https://download.jetbrains.com/idea/ideaIU-2016.3.2.tar.gz
 wget https://download.jetbrains.com/python/pycharm-professional-2016.3.2.tar.gz
 wget https://download.jetbrains.com/webstorm/WebStorm-2016.3.2.tar.gz
+wget https://www.apachefriends.org/xampp-files/7.0.13/xampp-linux-x64-7.0.13-1-installer.run
+chmod +x xampp-linux-x64-7.0.13-1-installer.run
 
+# Gparted, Kazam
+sudo apt install -y gparted kazam
+#wireshark, nmap
+sudo apt install -y wireshark nmap
+# DB
+sudo apt install -y postgresql-9.4
 # fix broken packges
 sudo apt update
 sudo apt install -f
