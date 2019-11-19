@@ -1,0 +1,28 @@
+{
+	"it() test case": {
+		"prefix": "itt",
+		"body": [
+			"it('$1', () => {$2});"
+		],
+		"description": "Create a Jest test case"
+	},
+	"it() async/await test case": {
+		"prefix": "itta",
+		"body": [
+			"it('$1', async () => {",
+			"$2",
+			"});"
+		],
+		"description": "Create a Jest test case"
+	},
+	"it() async/await test case with done callback": {
+		"prefix": "itd",
+		"body": [
+			"it('$1', async (done) => {",
+			"$2",
+			"done()",
+			"});"
+		],
+		"description": "Create a Jest test case"
+	},
+}
