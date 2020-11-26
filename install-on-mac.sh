@@ -6,6 +6,7 @@ brew install git-flow
 brew install docker
 brew install zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+brew install zsh-syntax-highlighting
 
 # tooling
 brew install httpie
@@ -17,9 +18,6 @@ brew install kubernetes-cli
 brew install kube-ps1
 brew install kubectx
 brew install stern
-
-source <(kubectl completion zsh)
-source <(stern --completion=zsh)
 
 # dev env
 brew cask install vscodium
