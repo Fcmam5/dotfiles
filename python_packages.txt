@@ -1,4 +1,0 @@
-Django==1.9
-Django==1.8
-numpy
-Pillow

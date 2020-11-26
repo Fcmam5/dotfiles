@@ -1,20 +1,17 @@
 # Fcmam5's dotfiles
 
-Automatizing the boring step when moving to a new computer the Installation & configuration, simply running:
+My boring dotfiles
 
-```shell
-sudo chmod 777 setup.sh
-sudo ./setup.sh
+### Aliases
+
+* **grepo**: Open current project remote repository.
+* **k**: kubectl
+
+#### Git config
+
+```bash
+git config --global core.editor "nano"
+git config --global alias.lg "log --oneline --decorate --all --graph"
 ```
-Will do the following:
-* Update the system
-* Install some useful programs
-* Configure git, Atom..
-* Cleanup after the installation
 
-## Todo
-* Install more tools
-* Extract, move to /opt and make jetbrains tools executables
 
-Graphic installation for:
-* Xampp
